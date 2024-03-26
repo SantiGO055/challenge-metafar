@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("challenge-metafar")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a549e942c7e19de13d9e226f42e799c2894e2cef")]
 [assembly: System.Reflection.AssemblyProductAttribute("challenge-metafar")]
 [assembly: System.Reflection.AssemblyTitleAttribute("challenge-metafar")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

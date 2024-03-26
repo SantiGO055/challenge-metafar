@@ -62,8 +62,17 @@ app.MapGet("/weatherforecast", () =>
 .WithOpenApi();
 
 
+
+
 app.MapGet("/auth/{tarjeta}/{pin}", (string tarjeta, string pin) =>
 {
+
+    //crear tablas:
+    // usuarios: idUsuario, tarjeta, pin
+    // cuentaBancaria: idCuenta, idUsuarioCuenta, saldo
+    // movimientos: idCuentaMovimiento, idUsuarioMovimiento, fechaHora
+
+
     // llamar a la base para validar datos
     if (tarjeta == "123456" && pin == "1234")
     {
