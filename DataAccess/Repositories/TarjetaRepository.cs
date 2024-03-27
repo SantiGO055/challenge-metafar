@@ -18,25 +18,60 @@ namespace DataAccess.Repositories
             _db = db;
         }
 
-        public async Task<ICollection<Movimiento>> GetMovimientos(Tarjeta tarjeta)
+        public async Task<CuentaBancaria> ActualizarSaldo(Tarjeta tarjeta, decimal saldo)
         {
-            return await _db.Movimiento.ToListAsync();
+            var nuevoMovimiento = new Movimiento
+            {
+                FechaMovimiento = DateTime.Now,
+                IDMovimientos = 1,
+                IDCuentaBancaria = tarjeta.CuentaBancaria.IDCuentaBancaria
+
+            };
+            //agrego nuevo movimiento
+            _db.Movimiento.Add(nuevoMovimiento);
+
+            //updatear cuenta bancaria
+            var cuenta = await _db.CuentaBancaria.FirstOrDefaultAsync(c => c.IDCuentaBancaria == tarjeta.CuentaBancaria.IDCuentaBancaria);
+            cuenta.Saldo = saldo;
+
+            await _db.SaveChangesAsync();
+
+            return cuenta;
         }
 
-        public async Task<ICollection<Movimiento>> GetSaldo(Tarjeta tarjeta)
+        public void AgregarOperacion(Movimiento movimiento)
         {
-            return await _db.Movimiento.ToListAsync();
+            throw new NotImplementedException();
         }
 
-        public async Task<ICollection<Usuario>> GetUsuarios()
+        public Task GuardarCambios()
         {
-            return await _db.Usuario.ToListAsync();
+            throw new NotImplementedException();
         }
 
-        public async Task<ICollection<CuentaBancaria>> PostRealizarRetiro(Tarjeta tarjeta, decimal monto)
+        public void GuardarHistorialOperacion(Movimiento movimiento)
         {
+            throw new NotImplementedException();
+        }
 
-            return await _db.CuentaBancaria.ToListAsync();
+        public Task<List<Movimiento>> ObtenerHistorialOperacionesAsync(int numeroTarjeta, int pagina, int registrosPorPagina)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Tarjeta ObtenerTarjetaPorNumero(int numeroTarjeta)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<int> ObtenerTotalRegistrosAsync(int numeroTarjeta)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<Usuario> ObtenerUsuarioPorTarjeta(int numeroTarjeta)
+        {
+            throw new NotImplementedException();
         }
     }
 }

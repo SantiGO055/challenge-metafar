@@ -3,76 +3,44 @@
   "WorkspaceRootPath": "C:\\Users\\santi\\Desktop\\challenge-metafar\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{004921CA-3932-4510-8D08-A38547C54591}|challenge-metafar.csproj|c:\\users\\santi\\desktop\\challenge-metafar\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{004921CA-3932-4510-8D08-A38547C54591}|challenge-metafar.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{004921CA-3932-4510-8D08-A38547C54591}|challenge-metafar.csproj|c:\\users\\santi\\desktop\\challenge-metafar\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{004921CA-3932-4510-8D08-A38547C54591}|challenge-metafar.csproj|solutionrelative:appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{004921CA-3932-4510-8D08-A38547C54591}|challenge-metafar.csproj|c:\\users\\santi\\desktop\\challenge-metafar\\migrations\\20240327184735_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{004921CA-3932-4510-8D08-A38547C54591}|challenge-metafar.csproj|solutionrelative:migrations\\20240327184735_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{004921CA-3932-4510-8D08-A38547C54591}|challenge-metafar.csproj|c:\\users\\santi\\desktop\\challenge-metafar\\migrations\\appdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{004921CA-3932-4510-8D08-A38547C54591}|challenge-metafar.csproj|solutionrelative:migrations\\appdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{004921CA-3932-4510-8D08-A38547C54591}|challenge-metafar.csproj|c:\\users\\santi\\desktop\\challenge-metafar\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{004921CA-3932-4510-8D08-A38547C54591}|challenge-metafar.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4BB9BF83-66D4-440D-9CC5-345DAA8A8A44}|DataAccess\\DataAccess.csproj|c:\\users\\santi\\desktop\\challenge-metafar\\dataaccess\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4BB9BF83-66D4-440D-9CC5-345DAA8A8A44}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C59496DA-E302-472A-B565-51B0B5EE5852}|Domain\\Domain.csproj|c:\\users\\santi\\desktop\\challenge-metafar\\domain\\models\\movimiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C59496DA-E302-472A-B565-51B0B5EE5852}|Domain\\Domain.csproj|solutionrelative:domain\\models\\movimiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C59496DA-E302-472A-B565-51B0B5EE5852}|Domain\\Domain.csproj|c:\\users\\santi\\desktop\\challenge-metafar\\domain\\models\\tipomovimiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C59496DA-E302-472A-B565-51B0B5EE5852}|Domain\\Domain.csproj|solutionrelative:domain\\models\\tipomovimiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C59496DA-E302-472A-B565-51B0B5EE5852}|Domain\\Domain.csproj|c:\\users\\santi\\desktop\\challenge-metafar\\domain\\models\\cuentabancaria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C59496DA-E302-472A-B565-51B0B5EE5852}|Domain\\Domain.csproj|solutionrelative:domain\\models\\cuentabancaria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C59496DA-E302-472A-B565-51B0B5EE5852}|Domain\\Domain.csproj|c:\\users\\santi\\desktop\\challenge-metafar\\domain\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C59496DA-E302-472A-B565-51B0B5EE5852}|Domain\\Domain.csproj|solutionrelative:domain\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4BB9BF83-66D4-440D-9CC5-345DAA8A8A44}|DataAccess\\DataAccess.csproj|c:\\users\\santi\\desktop\\challenge-metafar\\dataaccess\\repositories\\tarjetarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4BB9BF83-66D4-440D-9CC5-345DAA8A8A44}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\repositories\\tarjetarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C59496DA-E302-472A-B565-51B0B5EE5852}|Domain\\Domain.csproj|c:\\users\\santi\\desktop\\challenge-metafar\\domain\\models\\tarjeta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C59496DA-E302-472A-B565-51B0B5EE5852}|Domain\\Domain.csproj|solutionrelative:domain\\models\\tarjeta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3F543672-C225-43D3-99CD-08D09F818D25}|Application\\Application.csproj|c:\\users\\santi\\desktop\\challenge-metafar\\application\\movimiento\\commandhandlers\\extraersaldohandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F543672-C225-43D3-99CD-08D09F818D25}|Application\\Application.csproj|solutionrelative:application\\movimiento\\commandhandlers\\extraersaldohandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F543672-C225-43D3-99CD-08D09F818D25}|Application\\Application.csproj|c:\\users\\santi\\desktop\\challenge-metafar\\application\\movimiento\\commands\\extraersaldo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F543672-C225-43D3-99CD-08D09F818D25}|Application\\Application.csproj|solutionrelative:application\\movimiento\\commands\\extraersaldo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F543672-C225-43D3-99CD-08D09F818D25}|Application\\Application.csproj|c:\\users\\santi\\desktop\\challenge-metafar\\application\\abstractions\\iatmrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F543672-C225-43D3-99CD-08D09F818D25}|Application\\Application.csproj|solutionrelative:application\\abstractions\\iatmrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C59496DA-E302-472A-B565-51B0B5EE5852}|Domain\\Domain.csproj|c:\\users\\santi\\desktop\\challenge-metafar\\domain\\models\\cuentabancaria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C59496DA-E302-472A-B565-51B0B5EE5852}|Domain\\Domain.csproj|solutionrelative:domain\\models\\cuentabancaria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C59496DA-E302-472A-B565-51B0B5EE5852}|Domain\\Domain.csproj|c:\\users\\santi\\desktop\\challenge-metafar\\domain\\models\\movimiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C59496DA-E302-472A-B565-51B0B5EE5852}|Domain\\Domain.csproj|solutionrelative:domain\\models\\movimiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C59496DA-E302-472A-B565-51B0B5EE5852}|Domain\\Domain.csproj|c:\\users\\santi\\desktop\\challenge-metafar\\domain\\models\\saldo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C59496DA-E302-472A-B565-51B0B5EE5852}|Domain\\Domain.csproj|solutionrelative:domain\\models\\saldo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4BB9BF83-66D4-440D-9CC5-345DAA8A8A44}|DataAccess\\DataAccess.csproj|c:\\users\\santi\\desktop\\challenge-metafar\\dataaccess\\dataaccess.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{4BB9BF83-66D4-440D-9CC5-345DAA8A8A44}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\dataaccess.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{C59496DA-E302-472A-B565-51B0B5EE5852}|Domain\\Domain.csproj|c:\\users\\santi\\desktop\\challenge-metafar\\domain\\models\\tipomovimiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C59496DA-E302-472A-B565-51B0B5EE5852}|Domain\\Domain.csproj|solutionrelative:domain\\models\\tipomovimiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C59496DA-E302-472A-B565-51B0B5EE5852}|Domain\\Domain.csproj|c:\\users\\santi\\desktop\\challenge-metafar\\domain\\domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{C59496DA-E302-472A-B565-51B0B5EE5852}|Domain\\Domain.csproj|solutionrelative:domain\\domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3F543672-C225-43D3-99CD-08D09F818D25}|Application\\Application.csproj|c:\\users\\santi\\desktop\\challenge-metafar\\application\\application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{3F543672-C225-43D3-99CD-08D09F818D25}|Application\\Application.csproj|solutionrelative:application\\application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{004921CA-3932-4510-8D08-A38547C54591}|challenge-metafar.csproj|c:\\users\\santi\\desktop\\challenge-metafar\\challenge-metafar.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{004921CA-3932-4510-8D08-A38547C54591}|challenge-metafar.csproj|solutionrelative:challenge-metafar.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3F543672-C225-43D3-99CD-08D09F818D25}|Application\\Application.csproj|c:\\users\\santi\\desktop\\challenge-metafar\\application\\abstractions\\iatmrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F543672-C225-43D3-99CD-08D09F818D25}|Application\\Application.csproj|solutionrelative:application\\abstractions\\iatmrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4BB9BF83-66D4-440D-9CC5-345DAA8A8A44}|DataAccess\\DataAccess.csproj|c:\\users\\santi\\desktop\\challenge-metafar\\dataaccess\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4BB9BF83-66D4-440D-9CC5-345DAA8A8A44}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -82,71 +50,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "appsettings.Development.json",
-              "DocumentMoniker": "C:\\Users\\santi\\Desktop\\challenge-metafar\\appsettings.Development.json",
-              "RelativeDocumentMoniker": "appsettings.Development.json",
-              "ToolTip": "C:\\Users\\santi\\Desktop\\challenge-metafar\\appsettings.Development.json",
-              "RelativeToolTip": "appsettings.Development.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-03-27T18:54:51.292Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AppDbContextModelSnapshot.cs",
-              "DocumentMoniker": "C:\\Users\\santi\\Desktop\\challenge-metafar\\Migrations\\AppDbContextModelSnapshot.cs",
-              "RelativeDocumentMoniker": "Migrations\\AppDbContextModelSnapshot.cs",
-              "ToolTip": "C:\\Users\\santi\\Desktop\\challenge-metafar\\Migrations\\AppDbContextModelSnapshot.cs",
-              "RelativeToolTip": "Migrations\\AppDbContextModelSnapshot.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAA0AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-27T18:53:01.54Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "20240327184735_initial.cs",
-              "DocumentMoniker": "C:\\Users\\santi\\Desktop\\challenge-metafar\\Migrations\\20240327184735_initial.cs",
-              "RelativeDocumentMoniker": "Migrations\\20240327184735_initial.cs",
-              "ToolTip": "C:\\Users\\santi\\Desktop\\challenge-metafar\\Migrations\\20240327184735_initial.cs",
-              "RelativeToolTip": "Migrations\\20240327184735_initial.cs",
-              "ViewState": "AQIAAFcAAAAAAAAAAAAAABYAAAATAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-27T18:47:36.118Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\santi\\Desktop\\challenge-metafar\\DataAccess\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "DataAccess\\AppDbContext.cs",
-              "ToolTip": "C:\\Users\\santi\\Desktop\\challenge-metafar\\DataAccess\\AppDbContext.cs",
-              "RelativeToolTip": "DataAccess\\AppDbContext.cs",
-              "ViewState": "AQIAAC4AAAAAAAAAAAAcwEAAAABJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-27T17:42:31.915Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\santi\\Desktop\\challenge-metafar\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Users\\santi\\Desktop\\challenge-metafar\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-03-27T17:53:29.576Z",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\santi\\Desktop\\challenge-metafar\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\santi\\Desktop\\challenge-metafar\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAC8AAAAAAAAAAAAAADYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-27T20:24:37.344Z",
               "EditorCaption": ""
             },
             {
@@ -157,165 +73,113 @@
               "RelativeDocumentMoniker": "Domain\\Models\\Movimiento.cs",
               "ToolTip": "C:\\Users\\santi\\Desktop\\challenge-metafar\\Domain\\Models\\Movimiento.cs",
               "RelativeToolTip": "Domain\\Models\\Movimiento.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAABKAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-27T18:46:48.783Z",
+              "WhenOpened": "2024-03-27T20:10:06.166Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "TipoMovimiento.cs",
-              "DocumentMoniker": "C:\\Users\\santi\\Desktop\\challenge-metafar\\Domain\\Models\\TipoMovimiento.cs",
-              "RelativeDocumentMoniker": "Domain\\Models\\TipoMovimiento.cs",
-              "ToolTip": "C:\\Users\\santi\\Desktop\\challenge-metafar\\Domain\\Models\\TipoMovimiento.cs",
-              "RelativeToolTip": "Domain\\Models\\TipoMovimiento.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAABDAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-27T18:26:02.889Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\santi\\Desktop\\challenge-metafar\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\santi\\Desktop\\challenge-metafar\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAABJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-27T17:40:47.907Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 5,
               "Title": "CuentaBancaria.cs",
               "DocumentMoniker": "C:\\Users\\santi\\Desktop\\challenge-metafar\\Domain\\Models\\CuentaBancaria.cs",
               "RelativeDocumentMoniker": "Domain\\Models\\CuentaBancaria.cs",
               "ToolTip": "C:\\Users\\santi\\Desktop\\challenge-metafar\\Domain\\Models\\CuentaBancaria.cs",
               "RelativeToolTip": "Domain\\Models\\CuentaBancaria.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAANAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-27T17:45:40.979Z",
+              "WhenOpened": "2024-03-27T20:03:28.038Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Usuario.cs",
-              "DocumentMoniker": "C:\\Users\\santi\\Desktop\\challenge-metafar\\Domain\\Models\\Usuario.cs",
-              "RelativeDocumentMoniker": "Domain\\Models\\Usuario.cs",
-              "ToolTip": "C:\\Users\\santi\\Desktop\\challenge-metafar\\Domain\\Models\\Usuario.cs",
-              "RelativeToolTip": "Domain\\Models\\Usuario.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-27T18:26:10.843Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "TarjetaRepository.cs",
-              "DocumentMoniker": "C:\\Users\\santi\\Desktop\\challenge-metafar\\DataAccess\\Repositories\\TarjetaRepository.cs",
-              "RelativeDocumentMoniker": "DataAccess\\Repositories\\TarjetaRepository.cs",
-              "ToolTip": "C:\\Users\\santi\\Desktop\\challenge-metafar\\DataAccess\\Repositories\\TarjetaRepository.cs",
-              "RelativeToolTip": "DataAccess\\Repositories\\TarjetaRepository.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-27T17:44:36.334Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Tarjeta.cs",
-              "DocumentMoniker": "C:\\Users\\santi\\Desktop\\challenge-metafar\\Domain\\Models\\Tarjeta.cs",
-              "RelativeDocumentMoniker": "Domain\\Models\\Tarjeta.cs",
-              "ToolTip": "C:\\Users\\santi\\Desktop\\challenge-metafar\\Domain\\Models\\Tarjeta.cs",
-              "RelativeToolTip": "Domain\\Models\\Tarjeta.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-27T18:25:53.981Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 7,
               "Title": "Saldo.cs",
               "DocumentMoniker": "C:\\Users\\santi\\Desktop\\challenge-metafar\\Domain\\Models\\Saldo.cs",
               "RelativeDocumentMoniker": "Domain\\Models\\Saldo.cs",
               "ToolTip": "C:\\Users\\santi\\Desktop\\challenge-metafar\\Domain\\Models\\Saldo.cs",
               "RelativeToolTip": "Domain\\Models\\Saldo.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAANAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-27T18:25:39.826Z",
+              "WhenOpened": "2024-03-27T20:03:25.327Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "DataAccess",
-              "DocumentMoniker": "C:\\Users\\santi\\Desktop\\challenge-metafar\\DataAccess\\DataAccess.csproj",
-              "RelativeDocumentMoniker": "DataAccess\\DataAccess.csproj",
-              "ToolTip": "C:\\Users\\santi\\Desktop\\challenge-metafar\\DataAccess\\DataAccess.csproj",
-              "RelativeToolTip": "DataAccess\\DataAccess.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAABOAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-03-27T17:57:55.87Z",
+              "DocumentIndex": 8,
+              "Title": "TipoMovimiento.cs",
+              "DocumentMoniker": "C:\\Users\\santi\\Desktop\\challenge-metafar\\Domain\\Models\\TipoMovimiento.cs",
+              "RelativeDocumentMoniker": "Domain\\Models\\TipoMovimiento.cs",
+              "ToolTip": "C:\\Users\\santi\\Desktop\\challenge-metafar\\Domain\\Models\\TipoMovimiento.cs",
+              "RelativeToolTip": "Domain\\Models\\TipoMovimiento.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-27T20:03:23.522Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Application",
-              "DocumentMoniker": "C:\\Users\\santi\\Desktop\\challenge-metafar\\Application\\Application.csproj",
-              "RelativeDocumentMoniker": "Application\\Application.csproj",
-              "ToolTip": "C:\\Users\\santi\\Desktop\\challenge-metafar\\Application\\Application.csproj",
-              "RelativeToolTip": "Application\\Application.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAABOAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-03-27T17:58:45.495Z",
+              "DocumentIndex": 1,
+              "Title": "TarjetaRepository.cs",
+              "DocumentMoniker": "C:\\Users\\santi\\Desktop\\challenge-metafar\\DataAccess\\Repositories\\TarjetaRepository.cs",
+              "RelativeDocumentMoniker": "DataAccess\\Repositories\\TarjetaRepository.cs",
+              "ToolTip": "C:\\Users\\santi\\Desktop\\challenge-metafar\\DataAccess\\Repositories\\TarjetaRepository.cs",
+              "RelativeToolTip": "DataAccess\\Repositories\\TarjetaRepository.cs",
+              "ViewState": "AQIAADMAAAAAAAAAAAAAAD8AAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-27T19:43:16.906Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Domain",
-              "DocumentMoniker": "C:\\Users\\santi\\Desktop\\challenge-metafar\\Domain\\Domain.csproj",
-              "RelativeDocumentMoniker": "Domain\\Domain.csproj",
-              "ToolTip": "C:\\Users\\santi\\Desktop\\challenge-metafar\\Domain\\Domain.csproj",
-              "RelativeToolTip": "Domain\\Domain.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAABOAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-03-27T17:58:58.849Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "challenge-metafar",
-              "DocumentMoniker": "C:\\Users\\santi\\Desktop\\challenge-metafar\\challenge-metafar.csproj",
-              "RelativeDocumentMoniker": "challenge-metafar.csproj",
-              "ToolTip": "C:\\Users\\santi\\Desktop\\challenge-metafar\\challenge-metafar.csproj",
-              "RelativeToolTip": "challenge-metafar.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAEAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-03-27T17:54:14.884Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 4,
               "Title": "IATMRepository.cs",
               "DocumentMoniker": "C:\\Users\\santi\\Desktop\\challenge-metafar\\Application\\Abstractions\\IATMRepository.cs",
               "RelativeDocumentMoniker": "Application\\Abstractions\\IATMRepository.cs",
               "ToolTip": "C:\\Users\\santi\\Desktop\\challenge-metafar\\Application\\Abstractions\\IATMRepository.cs",
               "RelativeToolTip": "Application\\Abstractions\\IATMRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAABAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAADwvwwAAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-27T17:44:59.913Z",
+              "WhenOpened": "2024-03-27T19:42:43.544Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ExtraerSaldoHandler.cs",
+              "DocumentMoniker": "C:\\Users\\santi\\Desktop\\challenge-metafar\\Application\\Movimiento\\CommandHandlers\\ExtraerSaldoHandler.cs",
+              "RelativeDocumentMoniker": "Application\\Movimiento\\CommandHandlers\\ExtraerSaldoHandler.cs",
+              "ToolTip": "C:\\Users\\santi\\Desktop\\challenge-metafar\\Application\\Movimiento\\CommandHandlers\\ExtraerSaldoHandler.cs",
+              "RelativeToolTip": "Application\\Movimiento\\CommandHandlers\\ExtraerSaldoHandler.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABcAAABaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-27T19:09:55.12Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\santi\\Desktop\\challenge-metafar\\DataAccess\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "DataAccess\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\santi\\Desktop\\challenge-metafar\\DataAccess\\AppDbContext.cs",
+              "RelativeToolTip": "DataAccess\\AppDbContext.cs",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAAAC8AAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-27T17:42:31.915Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ExtraerSaldo.cs",
+              "DocumentMoniker": "C:\\Users\\santi\\Desktop\\challenge-metafar\\Application\\Movimiento\\Commands\\ExtraerSaldo.cs",
+              "RelativeDocumentMoniker": "Application\\Movimiento\\Commands\\ExtraerSaldo.cs",
+              "ToolTip": "C:\\Users\\santi\\Desktop\\challenge-metafar\\Application\\Movimiento\\Commands\\ExtraerSaldo.cs",
+              "RelativeToolTip": "Application\\Movimiento\\Commands\\ExtraerSaldo.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-27T19:04:52.701Z",
               "EditorCaption": ""
             }
           ]

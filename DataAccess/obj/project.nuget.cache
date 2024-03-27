@@ -1,11 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "0twtePu9cc9FkrXf7RjK9al4UkTGMXTwWq32qCHWAgDcx3PCJbfPa0Y8+RUgo7ly8YqYSqzJedXAuT36K9o89g==",
+  "dgSpecHash": "HTlV9x1uYzsieo0frMbkE5a1mnQYKRVPVl243wnWlqYKgmtqgHDLSulbkeEYk2MkSIuAncbI/bGzYQqT7ZVKqQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\santi\\Desktop\\challenge-metafar\\DataAccess\\DataAccess.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\santi\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\santi\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
+    "C:\\Users\\santi\\.nuget\\packages\\mediatr\\12.2.0\\mediatr.12.2.0.nupkg.sha512",
+    "C:\\Users\\santi\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
     "C:\\Users\\santi\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\santi\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\santi\\.nuget\\packages\\microsoft.data.sqlclient\\5.1.5\\microsoft.data.sqlclient.5.1.5.nupkg.sha512",

@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace challenge_metafar.Migrations
 {
     /// <inheritdoc />
-    public partial class initial : Migration
+    public partial class init : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -30,7 +30,7 @@ namespace challenge_metafar.Migrations
                 columns: table => new
                 {
                     IDTarjeta = table.Column<int>(type: "int", nullable: false),
-                    NroTarjeta = table.Column<string>(type: "varchar(6)", unicode: false, maxLength: 6, nullable: false),
+                    NroTarjeta = table.Column<int>(type: "int", unicode: false, maxLength: 6, nullable: false),
                     Pin = table.Column<int>(type: "int", unicode: false, maxLength: 4, nullable: false),
                     Intentos = table.Column<int>(type: "int", nullable: false),
                     TarjetaBloqueada = table.Column<bool>(type: "bit", nullable: false)

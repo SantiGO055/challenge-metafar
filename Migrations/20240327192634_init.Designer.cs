@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace challenge_metafar.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240327184735_initial")]
-    partial class initial
+    [Migration("20240327192634_init")]
+    partial class init
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -82,11 +82,10 @@ namespace challenge_metafar.Migrations
                     b.Property<int>("Intentos")
                         .HasColumnType("int");
 
-                    b.Property<string>("NroTarjeta")
-                        .IsRequired()
+                    b.Property<int>("NroTarjeta")
                         .HasMaxLength(6)
                         .IsUnicode(false)
-                        .HasColumnType("varchar(6)");
+                        .HasColumnType("int");
 
                     b.Property<int>("Pin")
                         .HasMaxLength(4)

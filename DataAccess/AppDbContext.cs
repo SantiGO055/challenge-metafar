@@ -28,11 +28,6 @@ namespace DataAccess
 
             modelBuilder.Entity<Tarjeta>(entity =>
             {
-                // public int IDTarjeta { get; set; }
-                //public string NroTarjeta { get; set; }
-                //public int Pin { get; set; }
-                //public int Intentos { get; set; }
-                //public bool TarjetaBloqueada { get; set; }
                 entity.ToTable("Tarjetas");
 
                 entity.HasKey(d => d.IDTarjeta);
@@ -49,12 +44,6 @@ namespace DataAccess
                         .HasColumnName("Pin");
             });
 
-            modelBuilder.Entity<Usuario>(entity =>
-            {
-                entity.HasOne(e => e.CuentaBancaria).WithMany(e => e.Usuario);
-
-
-            });
 
             modelBuilder.Entity<CuentaBancaria>(entity =>
             {

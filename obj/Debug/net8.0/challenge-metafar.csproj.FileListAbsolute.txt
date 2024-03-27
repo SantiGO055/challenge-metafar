@@ -148,3 +148,6 @@ C:\Users\santi\Desktop\challenge-metafar\obj\Debug\net8.0\refint\challenge-metaf
 C:\Users\santi\Desktop\challenge-metafar\obj\Debug\net8.0\challenge-metafar.pdb
 C:\Users\santi\Desktop\challenge-metafar\obj\Debug\net8.0\challenge-metafar.genruntimeconfig.cache
 C:\Users\santi\Desktop\challenge-metafar\obj\Debug\net8.0\ref\challenge-metafar.dll
+C:\Users\santi\Desktop\challenge-metafar\bin\Debug\net8.0\MediatR.dll
+C:\Users\santi\Desktop\challenge-metafar\bin\Debug\net8.0\MediatR.Contracts.dll
+C:\Users\santi\Desktop\challenge-metafar\bin\Debug\net8.0\MediatR.Extensions.Microsoft.DependencyInjection.dll

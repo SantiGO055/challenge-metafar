@@ -79,11 +79,10 @@ namespace challenge_metafar.Migrations
                     b.Property<int>("Intentos")
                         .HasColumnType("int");
 
-                    b.Property<string>("NroTarjeta")
-                        .IsRequired()
+                    b.Property<int>("NroTarjeta")
                         .HasMaxLength(6)
                         .IsUnicode(false)
-                        .HasColumnType("varchar(6)");
+                        .HasColumnType("int");
 
                     b.Property<int>("Pin")
                         .HasMaxLength(4)

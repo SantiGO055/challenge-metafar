@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "fKC44j9L3X5aRP5COI613W58DDA7fEk3EGJs1r/AMCStHFuaM1laOMdviFXaLoiVca1XKRMLASwSTs2pBFdiZw==",
+  "dgSpecHash": "KiFhG9GRx/vgpkxCCHF8XsrP9vUFETINwkTm8nlgnW/h/l+Ea2hKNuGwyPemTPvPaYwkHsUe7VUybyN+5BrS7g==",
   "success": true,
   "projectFilePath": "C:\\Users\\santi\\Desktop\\challenge-metafar\\Application\\Application.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\santi\\.nuget\\packages\\mediatr\\12.2.0\\mediatr.12.2.0.nupkg.sha512",
+    "C:\\Users\\santi\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
+    "C:\\Users\\santi\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

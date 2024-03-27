@@ -1,6 +1,8 @@
 using Application.Abstractions;
+using Application.Movimiento.Commands;
 using DataAccess;
 using DataAccess.Repositories;
+using MediatR;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -14,6 +16,7 @@ var connectionString = builder.Configuration.GetConnectionString("Default");
 
 builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(connectionString));
 builder.Services.AddScoped<IATMRepository, TarjetaRepository>();
+builder.Services.AddMediatR(typeof(ExtraerSaldo));
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -32,6 +35,9 @@ builder.Services.AddAuthentication("Bearer").AddJwtBearer( options =>
     };
 });
 
+
+// queries es para gets
+
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
@@ -44,7 +50,7 @@ app.UseHttpsRedirection();
 
 
 
-app.MapGet("/auth/{tarjeta}/{pin}", (string tarjeta, string pin) =>
+app.MapGet("/auth/{tarjeta}/{pin}", (IMediator mediator,string tarjeta, string pin) =>
 {
 
     //crear tablas:
