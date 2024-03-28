@@ -14,14 +14,16 @@ namespace challenge_metafar.EndpointDefinitions
 
         public void RegisterEndpoints(WebApplication app, WebApplicationBuilder builder)
         {
-            app.MapGet("/api/auth/{tarjeta}/{pin}", async (IMediator mediator, int tarjeta, string pin) =>
+            app.MapGet("/api/auth/{tarjeta}/{pin}", async (IMediator mediator, int tarjeta, int pin) =>
             {
 
 
                 // llamar a la base para validar datos
 
+                var login = new Login { NroTarjeta = tarjeta, Pin = pin};
+                var resultLogin = await mediator.Send(login);
 
-                if (tarjeta == 123456 && pin == "1234")
+                if (!resultLogin.Equals(null))
                 {
                     var tokenHandler = new JwtSecurityTokenHandler();
 
@@ -52,7 +54,7 @@ namespace challenge_metafar.EndpointDefinitions
                 var obtenerTarjeta = new ObtenerSaldoPorNroTarjeta { tarjeta = tarjeta };
                 var result = await mediator.Send(obtenerTarjeta);
                 Console.WriteLine(result);
-                return result;
+                return Results.Ok(result);
             }).RequireAuthorization().WithName("getSaldoByTarjeta");
         }
     }

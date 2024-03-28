@@ -21,7 +21,7 @@ namespace Application.Movimiento.QueryHandlers
 
         public async Task<Tarjeta> Handle(Login request, CancellationToken cancellationToken)
         {
-            return await atmRepository.Login(request.nroTarjeta, request.pin);
+            return await atmRepository.Login(request.NroTarjeta, request.Pin);
         }
     }
 

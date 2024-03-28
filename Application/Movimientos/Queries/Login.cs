@@ -10,8 +10,8 @@ namespace Application.Movimiento.Queries
 {
     public class Login : IRequest<Tarjeta>
     {
-        public int nroTarjeta { get; set; }
-        public int pin { get; set; }
+        public int NroTarjeta { get; set; }
+        public int Pin { get; set; }
 
     }
 }
