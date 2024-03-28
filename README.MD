@@ -44,6 +44,14 @@ Endpoints:
     INSERTAR DATOS.sql
 ```
 
+
+## Datos de prueba
+
+- Tarjeta: 123456 / Pin: 1234
+- Tarjeta: 879454 / Pin: 111
+- Tarjeta: 564123 / Pin: 4444
+- Tarjeta: 79423 / Pin: 5647
+
 ## DER
 
 ![DER](https://github.com/SantiGO055/challenge-metafar/blob/master/Utils/DER.jpg?raw=true)
