@@ -12,11 +12,10 @@ namespace Domain.Models
     {
         [Key]
         public int IDTarjeta {  get; set; }
-        public string NroTarjeta { get; set; } = string.Empty;
+        public int NroTarjeta { get; set; }
         public int Pin { get; set; }
         public int Intentos { get; set; }
         public bool TarjetaBloqueada { get; set; }
         public virtual CuentaBancaria CuentaBancaria { get; set; } = null!;
-        public virtual ICollection<Movimiento> Movimientos { get; set; } = [];
     }
 }

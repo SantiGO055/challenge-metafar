@@ -16,9 +16,4 @@
     <ProjectReference Include="..\Domain\Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Movimiento\QueryHandlers\" />
-    <Folder Include="Movimiento\Queries\" />
-  </ItemGroup>
-
 </Project>

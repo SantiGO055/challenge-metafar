@@ -28,7 +28,7 @@ namespace DataAccess
 
             modelBuilder.Entity<Tarjeta>(entity =>
             {
-                entity.ToTable("Tarjetas");
+                entity.ToTable("Tarjeta");
 
                 entity.HasKey(d => d.IDTarjeta);
                 entity.Property(e => e.IDTarjeta).HasColumnName("IDTarjeta");
@@ -42,22 +42,35 @@ namespace DataAccess
                         .HasMaxLength(4)
                         .IsUnicode(false)
                         .HasColumnName("Pin");
+               
             });
 
 
             modelBuilder.Entity<CuentaBancaria>(entity =>
             {
-                entity.HasOne(e => e.Tarjeta).WithOne(e => e.CuentaBancaria)
-                .HasForeignKey<Tarjeta>(e => e.IDTarjeta);
-                
-                entity.HasMany(e => e.Usuario).WithOne(e => e.CuentaBancaria);
-                entity.HasMany(e => e.Movimientos).WithOne(e => e.CuentaBancaria);
+
+                entity.HasOne(e => e.Tarjeta).WithOne(e => e.CuentaBancaria).HasForeignKey<CuentaBancaria>(e => e.IDTarjeta);
+
                 entity.Property(e => e.Saldo).HasColumnType("decimal(18, 2)");
             });
 
             modelBuilder.Entity<Movimiento>(entity =>
             {
-                entity.HasMany(e => e.TipoMovimiento).WithOne(e => e.Movimiento);
+                
+                entity.HasOne(e => e.CuentaBancaria).WithMany(e => e.Movimientos).HasForeignKey(e => e.IDCuentaBancaria);
+                entity.HasOne(e => e.TipoMovimiento).WithOne(e => e.Movimiento).HasForeignKey<Movimiento>(e => e.IDTipoMovimiento);
+
+            });
+            modelBuilder.Entity<Usuario>(entity =>
+            {
+                entity.HasOne(e => e.CuentaBancaria).WithOne(e => e.Usuario).HasForeignKey<Usuario>(e => e.IDCuentaBancaria);
+
+
+            });
+
+            modelBuilder.Entity<TipoMovimiento>(entity =>
+            {
+                
 
 
             });

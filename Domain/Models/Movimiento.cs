@@ -12,8 +12,10 @@ namespace Domain.Models
         [Key]
         public int IDMovimientos { get; set; }
         public int IDCuentaBancaria { get; set; }
+        public int IDTipoMovimiento { get; set; }
+
         public DateTime FechaMovimiento { get; set; }
-        public ICollection<TipoMovimiento> TipoMovimiento { get; set; } = null!;
+        public virtual TipoMovimiento TipoMovimiento { get; set; } = null!;
         public virtual CuentaBancaria CuentaBancaria { get; set; } = null!;
 
     }

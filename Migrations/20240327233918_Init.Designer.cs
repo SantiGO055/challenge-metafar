@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace challenge_metafar.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240327192634_init")]
-    partial class init
+    [Migration("20240327233918_Init")]
+    partial class Init
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -33,6 +33,12 @@ namespace challenge_metafar.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IDCuentaBancaria"));
 
+                    b.Property<int>("IDMovimiento")
+                        .HasColumnType("int");
+
+                    b.Property<int>("IDTarjeta")
+                        .HasColumnType("int");
+
                     b.Property<int>("NroCuenta")
                         .HasColumnType("int");
 
@@ -40,6 +46,9 @@ namespace challenge_metafar.Migrations
                         .HasColumnType("decimal(18, 2)");
 
                     b.HasKey("IDCuentaBancaria");
+
+                    b.HasIndex("IDTarjeta")
+                        .IsUnique();
 
                     b.ToTable("CuentaBancaria");
                 });
@@ -52,23 +61,21 @@ namespace challenge_metafar.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IDMovimientos"));
 
-                    b.Property<int>("CuentaBancariaIDCuentaBancaria")
-                        .HasColumnType("int");
-
                     b.Property<DateTime>("FechaMovimiento")
                         .HasColumnType("datetime2");
 
                     b.Property<int>("IDCuentaBancaria")
                         .HasColumnType("int");
 
-                    b.Property<int?>("TarjetaIDTarjeta")
+                    b.Property<int>("IDTipoMovimiento")
                         .HasColumnType("int");
 
                     b.HasKey("IDMovimientos");
 
-                    b.HasIndex("CuentaBancariaIDCuentaBancaria");
+                    b.HasIndex("IDCuentaBancaria");
 
-                    b.HasIndex("TarjetaIDTarjeta");
+                    b.HasIndex("IDTipoMovimiento")
+                        .IsUnique();
 
                     b.ToTable("Movimiento");
                 });
@@ -76,8 +83,11 @@ namespace challenge_metafar.Migrations
             modelBuilder.Entity("Domain.Models.Tarjeta", b =>
                 {
                     b.Property<int>("IDTarjeta")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasColumnName("IDTarjeta");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IDTarjeta"));
 
                     b.Property<int>("Intentos")
                         .HasColumnType("int");
@@ -98,7 +108,7 @@ namespace challenge_metafar.Migrations
 
                     b.HasKey("IDTarjeta");
 
-                    b.ToTable("Tarjetas", (string)null);
+                    b.ToTable("Tarjeta", (string)null);
                 });
 
             modelBuilder.Entity("Domain.Models.TipoMovimiento", b =>
@@ -112,12 +122,10 @@ namespace challenge_metafar.Migrations
                     b.Property<string>("DescripcionMovimiento")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("MovimientoIDMovimientos")
+                    b.Property<int>("IDMovimiento")
                         .HasColumnType("int");
 
                     b.HasKey("IDTipoMovimiento");
-
-                    b.HasIndex("MovimientoIDMovimientos");
 
                     b.ToTable("TipoMovimiento");
                 });
@@ -130,7 +138,7 @@ namespace challenge_metafar.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IDUsuario"));
 
-                    b.Property<int>("CuentaBancariaIDCuentaBancaria")
+                    b.Property<int>("IDCuentaBancaria")
                         .HasColumnType("int");
 
                     b.Property<string>("Nombre")
@@ -138,53 +146,47 @@ namespace challenge_metafar.Migrations
 
                     b.HasKey("IDUsuario");
 
-                    b.HasIndex("CuentaBancariaIDCuentaBancaria");
+                    b.HasIndex("IDCuentaBancaria")
+                        .IsUnique();
 
                     b.ToTable("Usuario");
+                });
+
+            modelBuilder.Entity("Domain.Models.CuentaBancaria", b =>
+                {
+                    b.HasOne("Domain.Models.Tarjeta", "Tarjeta")
+                        .WithOne("CuentaBancaria")
+                        .HasForeignKey("Domain.Models.CuentaBancaria", "IDTarjeta")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Tarjeta");
                 });
 
             modelBuilder.Entity("Domain.Models.Movimiento", b =>
                 {
                     b.HasOne("Domain.Models.CuentaBancaria", "CuentaBancaria")
                         .WithMany("Movimientos")
-                        .HasForeignKey("CuentaBancariaIDCuentaBancaria")
+                        .HasForeignKey("IDCuentaBancaria")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Domain.Models.Tarjeta", null)
-                        .WithMany("Movimientos")
-                        .HasForeignKey("TarjetaIDTarjeta");
-
-                    b.Navigation("CuentaBancaria");
-                });
-
-            modelBuilder.Entity("Domain.Models.Tarjeta", b =>
-                {
-                    b.HasOne("Domain.Models.CuentaBancaria", "CuentaBancaria")
-                        .WithOne("Tarjeta")
-                        .HasForeignKey("Domain.Models.Tarjeta", "IDTarjeta")
+                    b.HasOne("Domain.Models.TipoMovimiento", "TipoMovimiento")
+                        .WithOne("Movimiento")
+                        .HasForeignKey("Domain.Models.Movimiento", "IDTipoMovimiento")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("CuentaBancaria");
-                });
 
-            modelBuilder.Entity("Domain.Models.TipoMovimiento", b =>
-                {
-                    b.HasOne("Domain.Models.Movimiento", "Movimiento")
-                        .WithMany("TipoMovimiento")
-                        .HasForeignKey("MovimientoIDMovimientos")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Movimiento");
+                    b.Navigation("TipoMovimiento");
                 });
 
             modelBuilder.Entity("Domain.Models.Usuario", b =>
                 {
                     b.HasOne("Domain.Models.CuentaBancaria", "CuentaBancaria")
-                        .WithMany("Usuario")
-                        .HasForeignKey("CuentaBancariaIDCuentaBancaria")
+                        .WithOne("Usuario")
+                        .HasForeignKey("Domain.Models.Usuario", "IDCuentaBancaria")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -195,20 +197,20 @@ namespace challenge_metafar.Migrations
                 {
                     b.Navigation("Movimientos");
 
-                    b.Navigation("Tarjeta")
+                    b.Navigation("Usuario")
                         .IsRequired();
-
-                    b.Navigation("Usuario");
-                });
-
-            modelBuilder.Entity("Domain.Models.Movimiento", b =>
-                {
-                    b.Navigation("TipoMovimiento");
                 });
 
             modelBuilder.Entity("Domain.Models.Tarjeta", b =>
                 {
-                    b.Navigation("Movimientos");
+                    b.Navigation("CuentaBancaria")
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Domain.Models.TipoMovimiento", b =>
+                {
+                    b.Navigation("Movimiento")
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

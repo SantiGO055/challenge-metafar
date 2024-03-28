@@ -11,6 +11,8 @@ namespace Domain.Models
     {
         [Key]
         public int IDTipoMovimiento { get; set; }
+        public int IDMovimiento { get; set; }
+
         public string? DescripcionMovimiento { get; set; }
         public virtual Movimiento Movimiento { get; set; } = null!;
 

@@ -11,6 +11,8 @@ namespace Domain.Models
     {
         [Key]
         public int IDUsuario { get; set; }
+        public int IDCuentaBancaria { get; set; }
+
         public string? Nombre { get; set; }
         public virtual CuentaBancaria CuentaBancaria { get; set; } = null!;
 
