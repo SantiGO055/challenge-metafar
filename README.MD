@@ -46,4 +46,4 @@ Endpoints:
 
 ## DER
 
-![DER](https://github.com/SantiGO055/challenge-metafar/tree/master/Utils/DER.jpg)
+![DER](https://github.com/SantiGO055/challenge-metafar/blob/master/Utils/DER.jpg?raw=true)
