@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Transactions;
 
+
 namespace Domain.Models
 {
     public class Tarjeta
@@ -17,5 +18,7 @@ namespace Domain.Models
         public int Intentos { get; set; }
         public bool TarjetaBloqueada { get; set; }
         public virtual CuentaBancaria CuentaBancaria { get; set; } = null!;
+
+
     }
 }

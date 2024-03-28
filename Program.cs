@@ -17,6 +17,19 @@ builder.RegisterServices();
 builder.RegisterJWT();
 
 var app = builder.Build();
+
+app.Use(async (ctx, next) =>
+{
+    try
+    {
+        await next();
+    }
+    catch(Exception ex)
+    {
+        ctx.Response.StatusCode = 500;
+        await ctx.Response.WriteAsync(ex.ToString());
+    }
+});
 app.RegisterEdpointDefinitions(builder);
 
 if (app.Environment.IsDevelopment())

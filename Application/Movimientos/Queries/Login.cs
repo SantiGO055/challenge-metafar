@@ -1,4 +1,5 @@
-﻿using Domain.Models;
+﻿using Application.Abstractions;
+using Domain.Models;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Application.Movimiento.Queries
 {
-    public class Login : IRequest<Tarjeta>
+    public class Login : IRequest<ServiceResult<Tarjeta>>
     {
         public int NroTarjeta { get; set; }
         public int Pin { get; set; }

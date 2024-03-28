@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Application.Movimiento.QueryHandlers
 {
-    internal class LoginHandler : IRequestHandler<Login, Tarjeta>
+    internal class LoginHandler : IRequestHandler<Login, ServiceResult<Tarjeta>>
     {
         private readonly IATMRepository atmRepository;
         public LoginHandler(IATMRepository atmRepo)
@@ -19,7 +19,7 @@ namespace Application.Movimiento.QueryHandlers
 
         }
 
-        public async Task<Tarjeta> Handle(Login request, CancellationToken cancellationToken)
+        public async Task<ServiceResult<Tarjeta>> Handle(Login request, CancellationToken cancellationToken)
         {
             return await atmRepository.Login(request.NroTarjeta, request.Pin);
         }

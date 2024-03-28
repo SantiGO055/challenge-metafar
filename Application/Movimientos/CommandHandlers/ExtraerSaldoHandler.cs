@@ -21,7 +21,7 @@ namespace Application.Movimiento.CommandHandlers
 
         public async Task<CuentaBancaria> Handle(ExtraerSaldo request, CancellationToken cancellationToken)
         {
-            var cuenta = await atmRepository.ActualizarSaldo(request.tarjeta, request.saldo);
+            var cuenta = await atmRepository.ExtraerSaldo(request.tarjeta, request.saldo);
             return cuenta;
         }
     }

@@ -6,6 +6,7 @@ using DataAccess;
 using DataAccess.Repositories;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
+using System.Text.Json;
 
 namespace challenge_metafar.Extensions
 {
@@ -23,6 +24,11 @@ namespace challenge_metafar.Extensions
 
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+            builder.Services.Configure<Microsoft.AspNetCore.Http.Json.JsonOptions>(options =>
+            {
+                options.SerializerOptions.PropertyNameCaseInsensitive = false;
+                options.SerializerOptions.PropertyNamingPolicy = JsonNamingPolicy.CamelCase;
+            });
         }
 
         public static void RegisterEdpointDefinitions(this WebApplication app,WebApplicationBuilder builder)

@@ -18,7 +18,7 @@ namespace DataAccess.Repositories
             _db = db;
         }
 
-        public async Task<CuentaBancaria> ActualizarSaldo(Tarjeta tarjeta, decimal saldo)
+        public async Task<CuentaBancaria> ExtraerSaldo(Tarjeta tarjeta, decimal saldo)
         {
             var nuevoMovimiento = new Movimiento
             {
@@ -32,7 +32,7 @@ namespace DataAccess.Repositories
 
             //updatear cuenta bancaria
             var cuenta = await _db.CuentaBancaria.FirstOrDefaultAsync(c => c.IDCuentaBancaria == tarjeta.CuentaBancaria.IDCuentaBancaria);
-            cuenta.Saldo = saldo;
+            cuenta!.Saldo = saldo;
 
             await _db.SaveChangesAsync();
 
@@ -54,10 +54,63 @@ namespace DataAccess.Repositories
             throw new NotImplementedException();
         }
 
-        public async Task<Tarjeta> Login(int numeroTarjeta, int pin)
+        public async Task<ServiceResult<Tarjeta>> Login(int numeroTarjeta, int pin)
         {
-            var tarjeta = await _db.Tarjeta.FirstOrDefaultAsync(t => t.NroTarjeta == numeroTarjeta && t.Pin == pin);
-            return tarjeta;
+            ServiceResult<Tarjeta> result = new();
+            try
+            {
+
+                var tarjeta = await _db.Tarjeta.FirstOrDefaultAsync(t => t.NroTarjeta == numeroTarjeta);
+                if (tarjeta == null)
+                {
+                    result.Payload = null;
+                    result.IsError = true;
+                    result.Message = "Usuario Inexistente";
+                }
+                else
+                {
+                    if (!(tarjeta!.TarjetaBloqueada))
+                    {
+                        if (tarjeta?.Pin == pin)
+                        {
+                            result.Payload = tarjeta;
+
+                        }
+                        else
+                        {
+                            result.IsError = true;
+                            result.Message = "Pin Invalido";
+                            if (tarjeta?.Intentos > 0)
+                            {
+                                tarjeta.Intentos--;
+                            }
+                            else
+                            {
+                                result.Message = "Tarjeta bloqueada";
+                                tarjeta!.TarjetaBloqueada = true;
+                            }
+                            await _db.SaveChangesAsync();
+                        }
+                    }
+                    else
+                    {
+                        result.Payload = null;
+                        result.IsError = true;
+                        result.Message = "Tarjeta bloqueada";
+                    }
+                }
+                
+                
+
+                return result;
+            }
+            catch (Exception e)
+            {
+                result.IsError = true;
+                result.Message = e.Message;
+                return result;
+            }
+            
         }
 
         public Task<List<Movimiento>> ObtenerHistorialOperacionesAsync(int numeroTarjeta, int pagina, int registrosPorPagina)
