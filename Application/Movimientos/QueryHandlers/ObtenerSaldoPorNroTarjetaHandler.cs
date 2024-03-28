@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Application.Movimiento.QueryHandlers
 {
-    public class ObtenerSaldoPorNroTarjetaHandler : IRequestHandler<ObtenerSaldoPorNroTarjeta, Saldo>
+    public class ObtenerSaldoPorNroTarjetaHandler : IRequestHandler<ObtenerSaldoPorNroTarjeta, ServiceResult<Saldo>>
     {
         private readonly IATMRepository atmRepository;
         public ObtenerSaldoPorNroTarjetaHandler(IATMRepository atmRepo)
@@ -20,7 +20,7 @@ namespace Application.Movimiento.QueryHandlers
         }
 
 
-        public async Task<Saldo> Handle(ObtenerSaldoPorNroTarjeta request, CancellationToken cancellationToken)
+        public async Task<ServiceResult<Saldo>> Handle(ObtenerSaldoPorNroTarjeta request, CancellationToken cancellationToken)
         {
             return await atmRepository.ObtenerSaldoPorNroTarjeta(request.tarjeta);
         }

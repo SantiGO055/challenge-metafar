@@ -10,49 +10,10 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Repositories
 {
-    public class TarjetaRepository : IATMRepository
+    internal class TarjetaRepository(AppDbContext db) : IATMRepository
     {
-        private readonly AppDbContext _db;
-        public TarjetaRepository(AppDbContext db)
-        {
-            _db = db;
-        }
+        private readonly AppDbContext _db = db;
 
-        public async Task<CuentaBancaria> ExtraerSaldo(Tarjeta tarjeta, decimal saldo)
-        {
-            var nuevoMovimiento = new Movimiento
-            {
-                FechaMovimiento = DateTime.Now,
-                IDMovimientos = 1,
-                CuentaBancaria = tarjeta.CuentaBancaria
-
-            };
-            //agrego nuevo movimiento
-            _db.Movimiento.Add(nuevoMovimiento);
-
-            //updatear cuenta bancaria
-            var cuenta = await _db.CuentaBancaria.FirstOrDefaultAsync(c => c.IDCuentaBancaria == tarjeta.CuentaBancaria.IDCuentaBancaria);
-            cuenta!.Saldo = saldo;
-
-            await _db.SaveChangesAsync();
-
-            return cuenta;
-        }
-
-        public void AgregarOperacion(Movimiento movimiento)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task GuardarCambios()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void GuardarHistorialOperacion(Movimiento movimiento)
-        {
-            throw new NotImplementedException();
-        }
 
         public async Task<ServiceResult<Tarjeta>> Login(int numeroTarjeta, int pin)
         {
@@ -99,8 +60,8 @@ namespace DataAccess.Repositories
                         result.Message = "Tarjeta bloqueada";
                     }
                 }
-                
-                
+
+
 
                 return result;
             }
@@ -110,44 +71,198 @@ namespace DataAccess.Repositories
                 result.Message = e.Message;
                 return result;
             }
-            
+
         }
 
-        public Task<List<Movimiento>> ObtenerHistorialOperacionesAsync(int numeroTarjeta, int pagina, int registrosPorPagina)
-        {
-            throw new NotImplementedException();
-        }
 
-        public async Task<Saldo> ObtenerSaldoPorNroTarjeta(int numeroTarjeta)
+        public async Task<ServiceResult<Saldo>> ObtenerSaldoPorNroTarjeta(int numeroTarjeta)
         {
-            var tarjeta = await _db.Tarjeta.FirstOrDefaultAsync(t => t.NroTarjeta == numeroTarjeta);
-            var cuenta = await _db.CuentaBancaria.FirstOrDefaultAsync(c => c.IDTarjeta == tarjeta.IDTarjeta); //nro de cuenta y saldo
-            var movimiento = await _db.Movimiento.FirstOrDefaultAsync(m => m.IDCuentaBancaria == cuenta.IDCuentaBancaria);
-            var usuario = await _db.Usuario.FirstOrDefaultAsync(u => u.IDCuentaBancaria == cuenta.IDCuentaBancaria);
-            var result = new Saldo
+            ServiceResult<Saldo> result = new();
+            try
             {
-                NombreUsuario = usuario.Nombre,
-                NroCuenta = cuenta.NroCuenta,
-                SaldoActual = cuenta.Saldo,
-                FechaExtraccion = movimiento.FechaMovimiento
 
-            };
+                var tarjeta = await _db.Tarjeta.FirstOrDefaultAsync(t => t.NroTarjeta == numeroTarjeta);
+                if (tarjeta == null)
+                {
+                    result.Message = "Usuario no encontrado";
+                    result.Payload = null;
+                    result.IsError = true;
+                    return result;
+                }
+                else
+                {
+
+                    var cuenta = await _db.CuentaBancaria.FirstOrDefaultAsync(c => c.IDTarjeta == tarjeta.IDTarjeta); //nro de cuenta y saldo
+                    var movimiento = await _db.Movimiento.FirstOrDefaultAsync(m => m.IDCuentaBancaria == cuenta.IDCuentaBancaria);
+                    var usuario = await _db.Usuario.FirstOrDefaultAsync(u => u.IDCuentaBancaria == cuenta.IDCuentaBancaria);
+                    result.Payload = new Saldo
+                    {
+                        NombreUsuario = usuario.Nombre,
+                        NroCuenta = cuenta.NroCuenta,
+                        SaldoActual = cuenta.Saldo,
+                        FechaExtraccion = movimiento?.FechaMovimiento
+
+                    };
+
+                }
+            }
+            catch (Exception e)
+            {
+                result.IsError = true;
+                result.Message = e.Message;
+            }
             return result;
         }
 
-        public Tarjeta ObtenerTarjetaPorNumero(int numeroTarjeta)
+
+        public async Task<ServiceResult<Saldo>> ExtraerSaldo(int tarjeta, decimal saldo)
         {
-            throw new NotImplementedException();
+            ServiceResult<Saldo> result = new();
+            try
+            {
+                var tarjetaResult = await _db.Tarjeta.FirstOrDefaultAsync(t => t.NroTarjeta == tarjeta);
+                if (tarjetaResult == null)
+                {
+                    result.Payload = null;
+                    result.IsError = true;
+                    result.Message = "Usuario Inexistente";
+                }
+                else
+                {
+                    var cuenta = await _db.CuentaBancaria.FirstOrDefaultAsync(c => c.IDTarjeta == tarjetaResult.IDTarjeta);
+                    if(cuenta == null)
+                    {
+                        result.Payload = null;
+                        result.IsError = true;
+                        result.Message = "La cuenta para realizar la extracción no existe.";
+                        return result;
+                    }
+                    else
+                    {
+                        if (saldo > cuenta?.Saldo)
+                        {
+                            result.Payload = null;
+                            result.IsError = true;
+                            result.Message = "Saldo insuficiente para realizar la operación.";
+                            return result;
+                        }
+                        else
+                        {
+                            cuenta!.Saldo -= saldo;
+                            var nuevoMovimiento = new Movimiento
+                            {
+                                FechaMovimiento = DateTime.Now,
+                                IDTipoMovimiento= 1,// extraccion
+                                CuentaBancaria = tarjetaResult.CuentaBancaria,
+                                Saldo = cuenta.Saldo
+                            };
+                            _db.Movimiento.Add(nuevoMovimiento);
+
+                            var usuario = await _db.Usuario.FirstOrDefaultAsync(c => c.IDCuentaBancaria == cuenta.IDCuentaBancaria);
+
+                            result.Payload = new Saldo
+                            {
+                                NombreUsuario = usuario?.Nombre,
+                                NroCuenta = cuenta.NroCuenta,
+                                SaldoActual = cuenta.Saldo,
+                                FechaExtraccion = nuevoMovimiento.FechaMovimiento
+
+                            };
+                        }
+
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                result.IsError = true;
+                result.Message = e.Message;
+                return result;
+            }
+            await _db.SaveChangesAsync();
+            return result;
         }
 
-        public Task<int> ObtenerTotalRegistrosAsync(int numeroTarjeta)
+
+        
+        public async Task<ServiceResult<List<Operacion>>> ObtenerHistorialOperaciones(int numeroTarjeta, int pagina)
         {
-            throw new NotImplementedException();
+            ServiceResult<List<Operacion>> result = new();
+            Task<List<Operacion>> operacion;
+
+            try
+            {
+                var tarjeta = await ObtenerTarjeta(numeroTarjeta);
+                var tarjetaResult = tarjeta.Payload;
+                
+                if (tarjeta.IsError)
+                {
+                    
+                    result.IsError = true;
+
+                    return result;
+                }
+                else
+                {
+                    operacion = (from mov in _db.Movimiento
+                                  join cue in _db.CuentaBancaria on mov.IDCuentaBancaria equals cue.IDCuentaBancaria
+                                  join usu in _db.Usuario on mov.IDCuentaBancaria equals usu.IDCuentaBancaria
+                                  join tmov in _db.TipoMovimiento on mov.IDTipoMovimiento equals tmov.IDTipoMovimiento
+                                  select new Operacion
+                                  {
+                                      Resumen = new Saldo { NombreUsuario = usu.Nombre, NroCuenta = cue.NroCuenta, SaldoActual = mov.Saldo, FechaExtraccion = mov.FechaMovimiento },
+                                      TipoMovimiento = new TipoMovimiento { IDTipoMovimiento = mov.IDTipoMovimiento, DescripcionMovimiento = tmov.DescripcionMovimiento }
+
+                                  }
+                        )
+                        .Skip((pagina - 1) * 10)
+                        .Take(10)
+                        .ToListAsync();
+
+                    result.Payload = await operacion;
+
+                }
+
+            }
+            catch (Exception e)
+            {
+                result.IsError = true;
+                result.Message = e.Message;
+                return result;
+            }
+            
+
+            result.IsError = result.Payload.Count > 0 ? false : true;
+            result.Message = result.IsError ? "No se encontraron resultados" : 
+                result.Payload.Count < 10 ? $"Se encontraron {result.Payload.Count} resultados en la pagina {pagina}." 
+                : $"Se muestran {result.Payload.Count} registros de la pagina {pagina}";
+            return result;
         }
 
-        public Task<Usuario> ObtenerUsuarioPorTarjeta(int numeroTarjeta)
+        public async Task<ServiceResult<Tarjeta>> ObtenerTarjeta(int numeroTarjeta)
         {
-            throw new NotImplementedException();
+            ServiceResult<Tarjeta> result = new();
+            try
+            {
+                var tarjetaResult = await _db.Tarjeta.FirstOrDefaultAsync(t => t.NroTarjeta == numeroTarjeta);
+                if(tarjetaResult == null)
+                {
+                    result.IsError = true;
+                    result.Message = "Numero de tarjeta inválido.";
+                    return result;
+                }
+                else
+                {
+                    result.Payload = tarjetaResult;
+                }
+            }
+            catch (Exception e)
+            {
+                result.IsError = true;
+                result.Message = e.Message;
+                return result;
+            }
+            return result;
         }
     }
 }

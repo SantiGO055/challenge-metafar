@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace challenge_metafar.Migrations
 {
     /// <inheritdoc />
-    public partial class Init : Migration
+    public partial class init : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -33,7 +33,6 @@ namespace challenge_metafar.Migrations
                 {
                     IDTipoMovimiento = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    IDMovimiento = table.Column<int>(type: "int", nullable: false),
                     DescripcionMovimiento = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
@@ -71,6 +70,7 @@ namespace challenge_metafar.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     IDCuentaBancaria = table.Column<int>(type: "int", nullable: false),
                     IDTipoMovimiento = table.Column<int>(type: "int", nullable: false),
+                    Saldo = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     FechaMovimiento = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
@@ -124,8 +124,7 @@ namespace challenge_metafar.Migrations
             migrationBuilder.CreateIndex(
                 name: "IX_Movimiento_IDTipoMovimiento",
                 table: "Movimiento",
-                column: "IDTipoMovimiento",
-                unique: true);
+                column: "IDTipoMovimiento");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Usuario_IDCuentaBancaria",

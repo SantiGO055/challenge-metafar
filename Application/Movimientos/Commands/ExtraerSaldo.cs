@@ -1,4 +1,5 @@
-﻿using Domain.Models;
+﻿using Application.Abstractions;
+using Domain.Models;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -8,10 +9,10 @@ using System.Threading.Tasks;
 
 namespace Application.Movimiento.Commands
 {
-    public class ExtraerSaldo : IRequest<CuentaBancaria>
+    public class ExtraerSaldo : IRequest<ServiceResult<Saldo>>
     {
         public decimal saldo { get; set; }
-        public Tarjeta tarjeta { get; set; } = null!;
+        public int tarjeta { get; set; }
         public string? ResumenCuentaBancaria { get; set; }
     }
 }

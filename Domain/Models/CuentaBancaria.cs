@@ -18,7 +18,7 @@ namespace Domain.Models
         public ICollection<Movimiento> Movimientos { get; set; } = [];
         public int NroCuenta { get; set; }
         public decimal Saldo { get; set; }
-
+        // public Realizar
 
     }
 }

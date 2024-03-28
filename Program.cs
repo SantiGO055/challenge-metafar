@@ -32,11 +32,7 @@ app.Use(async (ctx, next) =>
 });
 app.RegisterEdpointDefinitions(builder);
 
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+
 
 app.UseHttpsRedirection();
 

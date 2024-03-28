@@ -21,6 +21,7 @@ namespace DataAccess
         public virtual DbSet<Movimiento> Movimiento { get; set; }
         public virtual DbSet<CuentaBancaria> CuentaBancaria { get; set; }
         public virtual DbSet<Usuario> Usuario { get; set; }
+        public virtual DbSet<TipoMovimiento> TipoMovimiento { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -58,7 +59,8 @@ namespace DataAccess
             {
                 
                 entity.HasOne(e => e.CuentaBancaria).WithMany(e => e.Movimientos).HasForeignKey(e => e.IDCuentaBancaria);
-                entity.HasOne(e => e.TipoMovimiento).WithOne(e => e.Movimiento).HasForeignKey<Movimiento>(e => e.IDTipoMovimiento);
+                entity.HasOne(e => e.TipoMovimiento).WithMany(e => e.Movimientos).HasForeignKey(e => e.IDTipoMovimiento);
+                entity.Property(e => e.Saldo).HasColumnType("decimal(18, 2)");
 
             });
             modelBuilder.Entity<Usuario>(entity =>
@@ -70,8 +72,8 @@ namespace DataAccess
 
             modelBuilder.Entity<TipoMovimiento>(entity =>
             {
-                
 
+                
 
             });
 

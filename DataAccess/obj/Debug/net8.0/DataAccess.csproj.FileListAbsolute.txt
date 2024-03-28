@@ -14,3 +14,5 @@ C:\Users\santi\Desktop\challenge-metafar\DataAccess\obj\Debug\net8.0\DataAccess.
 C:\Users\santi\Desktop\challenge-metafar\DataAccess\obj\Debug\net8.0\refint\DataAccess.dll
 C:\Users\santi\Desktop\challenge-metafar\DataAccess\obj\Debug\net8.0\DataAccess.pdb
 C:\Users\santi\Desktop\challenge-metafar\DataAccess\obj\Debug\net8.0\ref\DataAccess.dll
+C:\Users\santi\Desktop\challenge-metafar\DataAccess\bin\Debug\net8.0\DataAccess.xml
+C:\Users\santi\Desktop\challenge-metafar\DataAccess\obj\Debug\net8.0\DataAccess.xml

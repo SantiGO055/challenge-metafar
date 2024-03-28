@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Application.Movimiento.CommandHandlers
 {
-    public class ExtraerSaldoHandler : IRequestHandler<ExtraerSaldo, CuentaBancaria>
+    public class ExtraerSaldoHandler : IRequestHandler<ExtraerSaldo, ServiceResult<Saldo>>
     {
         private readonly IATMRepository atmRepository;
         public ExtraerSaldoHandler(IATMRepository atmRepo)
@@ -19,7 +19,7 @@ namespace Application.Movimiento.CommandHandlers
             
         }
 
-        public async Task<CuentaBancaria> Handle(ExtraerSaldo request, CancellationToken cancellationToken)
+        public async Task<ServiceResult<Saldo>> Handle(ExtraerSaldo request, CancellationToken cancellationToken)
         {
             var cuenta = await atmRepository.ExtraerSaldo(request.tarjeta, request.saldo);
             return cuenta;

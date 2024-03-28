@@ -67,12 +67,14 @@ namespace challenge_metafar.Migrations
                     b.Property<int>("IDTipoMovimiento")
                         .HasColumnType("int");
 
+                    b.Property<decimal>("Saldo")
+                        .HasColumnType("decimal(18, 2)");
+
                     b.HasKey("IDMovimientos");
 
                     b.HasIndex("IDCuentaBancaria");
 
-                    b.HasIndex("IDTipoMovimiento")
-                        .IsUnique();
+                    b.HasIndex("IDTipoMovimiento");
 
                     b.ToTable("Movimiento");
                 });
@@ -118,9 +120,6 @@ namespace challenge_metafar.Migrations
 
                     b.Property<string>("DescripcionMovimiento")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("IDMovimiento")
-                        .HasColumnType("int");
 
                     b.HasKey("IDTipoMovimiento");
 
@@ -169,8 +168,8 @@ namespace challenge_metafar.Migrations
                         .IsRequired();
 
                     b.HasOne("Domain.Models.TipoMovimiento", "TipoMovimiento")
-                        .WithOne("Movimiento")
-                        .HasForeignKey("Domain.Models.Movimiento", "IDTipoMovimiento")
+                        .WithMany("Movimientos")
+                        .HasForeignKey("IDTipoMovimiento")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -206,8 +205,7 @@ namespace challenge_metafar.Migrations
 
             modelBuilder.Entity("Domain.Models.TipoMovimiento", b =>
                 {
-                    b.Navigation("Movimiento")
-                        .IsRequired();
+                    b.Navigation("Movimientos");
                 });
 #pragma warning restore 612, 618
         }

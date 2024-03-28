@@ -10,12 +10,9 @@ namespace Application.Abstractions
     public interface IATMRepository
     {
         Task<ServiceResult<Tarjeta>> Login(int numeroTarjeta, int pin);
-        Task<CuentaBancaria> ExtraerSaldo(Tarjeta tarjeta, decimal saldo);
-        void GuardarHistorialOperacion(Domain.Models.Movimiento movimiento);
-        void AgregarOperacion(Domain.Models.Movimiento movimiento);
-        Task<int> ObtenerTotalRegistrosAsync(int numeroTarjeta);
-        Task<List<Domain.Models.Movimiento>> ObtenerHistorialOperacionesAsync(int numeroTarjeta, int pagina, int registrosPorPagina);
-        Task<Saldo> ObtenerSaldoPorNroTarjeta(int numeroTarjeta);
-        Task GuardarCambios();
+        Task<ServiceResult<Tarjeta>> ObtenerTarjeta(int numeroTarjeta);
+        Task<ServiceResult<Saldo>> ExtraerSaldo(int tarjeta, decimal saldo);
+        Task<ServiceResult<Saldo>> ObtenerSaldoPorNroTarjeta(int numeroTarjeta);
+        Task<ServiceResult<List<Operacion>>> ObtenerHistorialOperaciones(int numeroTarjeta, int pagina);
     }
 }
