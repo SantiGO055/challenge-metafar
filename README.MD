@@ -29,10 +29,9 @@ Endpoints:
 4. Entregar un diagrama de entidad relación de las tablas planteadas (DER)
 ## Preparar entorno
 
-##### Una vez clonado el repositorio, para la creacion de las tablas en la base se deberan ejecutar los siguientes comandos en una Consola de Administración de Paquetes:
+##### Una vez clonado el repositorio, para la creacion de las tablas en la base se debera ejecutar el siguiente comando en una Consola de Administración de Paquetes:
 
 ```bash
-  Add-Migration init
   Update-Database
 ```
 
