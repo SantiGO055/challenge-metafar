@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\santi\\Desktop\\challenge-metafar\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{004921CA-3932-4510-8D08-A38547C54591}|challenge-metafar.csproj|c:\\users\\santi\\desktop\\challenge-metafar\\readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
-      "RelativeMoniker": "D:0:0:{004921CA-3932-4510-8D08-A38547C54591}|challenge-metafar.csproj|solutionrelative:readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+      "AbsoluteMoniker": "D:0:0:{4BB9BF83-66D4-440D-9CC5-345DAA8A8A44}|DataAccess\\DataAccess.csproj|c:\\users\\santi\\desktop\\challenge-metafar\\dataaccess\\repositories\\tarjetarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4BB9BF83-66D4-440D-9CC5-345DAA8A8A44}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\repositories\\tarjetarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{004921CA-3932-4510-8D08-A38547C54591}|challenge-metafar.csproj|c:\\users\\santi\\desktop\\challenge-metafar\\endpointdefinitions\\endpointdefinition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -13,10 +13,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{004921CA-3932-4510-8D08-A38547C54591}|challenge-metafar.csproj|c:\\users\\santi\\desktop\\challenge-metafar\\extensions\\extensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{004921CA-3932-4510-8D08-A38547C54591}|challenge-metafar.csproj|solutionrelative:extensions\\extensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4BB9BF83-66D4-440D-9CC5-345DAA8A8A44}|DataAccess\\DataAccess.csproj|c:\\users\\santi\\desktop\\challenge-metafar\\dataaccess\\repositories\\tarjetarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4BB9BF83-66D4-440D-9CC5-345DAA8A8A44}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\repositories\\tarjetarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{004921CA-3932-4510-8D08-A38547C54591}|challenge-metafar.csproj|c:\\users\\santi\\desktop\\challenge-metafar\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -49,10 +45,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\santi\\Desktop\\challenge-metafar\\Migrations\\20240328193048_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20240328193048_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\santi\\Desktop\\challenge-metafar\\Migrations\\20240328193015_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20240328193015_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C59496DA-E302-472A-B565-51B0B5EE5852}|Domain\\Domain.csproj|c:\\users\\santi\\desktop\\challenge-metafar\\domain\\models\\movimiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -122,19 +114,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "20240328193015_init.cs",
-              "DocumentMoniker": "C:\\Users\\santi\\Desktop\\challenge-metafar\\Migrations\\20240328193015_init.cs",
-              "RelativeDocumentMoniker": "Migrations\\20240328193015_init.cs",
-              "ToolTip": "C:\\Users\\santi\\Desktop\\challenge-metafar\\Migrations\\20240328193015_init.cs",
-              "RelativeToolTip": "Migrations\\20240328193015_init.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-28T19:30:15.267Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 8,
               "Title": "ObtenerOperacionesHandler.cs",
               "DocumentMoniker": "C:\\Users\\santi\\Desktop\\challenge-metafar\\Application\\Movimientos\\QueryHandlers\\ObtenerOperacionesHandler.cs",
               "RelativeDocumentMoniker": "Application\\Movimientos\\QueryHandlers\\ObtenerOperacionesHandler.cs",
@@ -146,7 +126,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 7,
               "Title": "JWTExtension.cs",
               "DocumentMoniker": "C:\\Users\\santi\\Desktop\\challenge-metafar\\Extensions\\JWTExtension.cs",
               "RelativeDocumentMoniker": "Extensions\\JWTExtension.cs",
@@ -158,7 +138,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 9,
               "Title": "TipoMovimiento.cs",
               "DocumentMoniker": "C:\\Users\\santi\\Desktop\\challenge-metafar\\Domain\\Models\\TipoMovimiento.cs",
               "RelativeDocumentMoniker": "Domain\\Models\\TipoMovimiento.cs",
@@ -170,7 +150,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "ExtraerSaldoHandler.cs",
               "DocumentMoniker": "C:\\Users\\santi\\Desktop\\challenge-metafar\\Application\\Movimientos\\CommandHandlers\\ExtraerSaldoHandler.cs",
               "RelativeDocumentMoniker": "Application\\Movimientos\\CommandHandlers\\ExtraerSaldoHandler.cs",
@@ -188,13 +168,14 @@
               "RelativeDocumentMoniker": "EndpointDefinitions\\EndpointDefinition.cs",
               "ToolTip": "C:\\Users\\santi\\Desktop\\challenge-metafar\\EndpointDefinitions\\EndpointDefinition.cs",
               "RelativeToolTip": "EndpointDefinitions\\EndpointDefinition.cs",
-              "ViewState": "AQIAADsAAAAAAAAAAAAAAHkAAAA1AAAA",
+              "ViewState": "AQIAAEsAAAAAAAAAAAAAAFoAAAA/AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-28T01:14:59.676Z"
+              "WhenOpened": "2024-03-28T01:14:59.676Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 6,
               "Title": "IATMRepository.cs",
               "DocumentMoniker": "C:\\Users\\santi\\Desktop\\challenge-metafar\\Application\\Abstractions\\IATMRepository.cs",
               "RelativeDocumentMoniker": "Application\\Abstractions\\IATMRepository.cs",
@@ -203,19 +184,6 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-28T21:20:08.256Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "README.MD",
-              "DocumentMoniker": "C:\\Users\\santi\\Desktop\\challenge-metafar\\README.MD",
-              "RelativeDocumentMoniker": "README.MD",
-              "ToolTip": "C:\\Users\\santi\\Desktop\\challenge-metafar\\README.MD",
-              "RelativeToolTip": "README.MD",
-              "ViewState": "AQIAABkAAAAAAAAAAAAswDAAAABRAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
-              "WhenOpened": "2024-03-28T19:15:07.947Z",
-              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -231,19 +199,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "TarjetaRepository.cs",
               "DocumentMoniker": "C:\\Users\\santi\\Desktop\\challenge-metafar\\DataAccess\\Repositories\\TarjetaRepository.cs",
               "RelativeDocumentMoniker": "DataAccess\\Repositories\\TarjetaRepository.cs",
               "ToolTip": "C:\\Users\\santi\\Desktop\\challenge-metafar\\DataAccess\\Repositories\\TarjetaRepository.cs",
               "RelativeToolTip": "DataAccess\\Repositories\\TarjetaRepository.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABAAAAAAAAAA",
+              "ViewState": "AQIAAD8AAAAAAAAAAAAhwFAAAAAPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-28T17:32:24.028Z"
+              "WhenOpened": "2024-03-28T17:32:24.028Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\santi\\Desktop\\challenge-metafar\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -255,7 +224,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "ExtraerSaldo.cs",
               "DocumentMoniker": "C:\\Users\\santi\\Desktop\\challenge-metafar\\Application\\Movimientos\\Commands\\ExtraerSaldo.cs",
               "RelativeDocumentMoniker": "Application\\Movimientos\\Commands\\ExtraerSaldo.cs",
@@ -267,7 +236,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 16,
               "Title": "Tarjeta.cs",
               "DocumentMoniker": "C:\\Users\\santi\\Desktop\\challenge-metafar\\Domain\\Models\\Tarjeta.cs",
               "RelativeDocumentMoniker": "Domain\\Models\\Tarjeta.cs",
@@ -279,7 +248,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 11,
               "Title": "Movimiento.cs",
               "DocumentMoniker": "C:\\Users\\santi\\Desktop\\challenge-metafar\\Domain\\Models\\Movimiento.cs",
               "RelativeDocumentMoniker": "Domain\\Models\\Movimiento.cs",
@@ -291,7 +260,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 17,
               "Title": "20240328191620_init.cs",
               "DocumentMoniker": "C:\\Users\\santi\\Desktop\\challenge-metafar\\Migrations\\20240328191620_init.cs",
               "RelativeDocumentMoniker": "Migrations\\20240328191620_init.cs",
@@ -303,7 +272,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 12,
               "Title": "20240328192301_init.cs",
               "DocumentMoniker": "C:\\Users\\santi\\Desktop\\challenge-metafar\\Migrations\\20240328192301_init.cs",
               "RelativeDocumentMoniker": "Migrations\\20240328192301_init.cs",
@@ -315,7 +284,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 10,
               "Title": "20240328193048_init.cs",
               "DocumentMoniker": "C:\\Users\\santi\\Desktop\\challenge-metafar\\Migrations\\20240328193048_init.cs",
               "RelativeDocumentMoniker": "Migrations\\20240328193048_init.cs",
@@ -327,7 +296,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 15,
               "Title": "LoginResponse.cs",
               "DocumentMoniker": "C:\\Users\\santi\\Desktop\\challenge-metafar\\Domain\\Models\\LoginResponse.cs",
               "RelativeDocumentMoniker": "Domain\\Models\\LoginResponse.cs",
@@ -339,7 +308,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 13,
               "Title": "Domain.csproj",
               "DocumentMoniker": "C:\\Users\\santi\\Desktop\\challenge-metafar\\Domain\\Domain.csproj",
               "RelativeDocumentMoniker": "Domain\\Domain.csproj",
@@ -351,7 +320,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 21,
               "Title": "Saldo.cs",
               "DocumentMoniker": "C:\\Users\\santi\\Desktop\\challenge-metafar\\Domain\\Models\\Saldo.cs",
               "RelativeDocumentMoniker": "Domain\\Models\\Saldo.cs",
@@ -363,7 +332,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 14,
               "Title": "CuentaBancaria.cs",
               "DocumentMoniker": "C:\\Users\\santi\\Desktop\\challenge-metafar\\Domain\\Models\\CuentaBancaria.cs",
               "RelativeDocumentMoniker": "Domain\\Models\\CuentaBancaria.cs",
@@ -375,7 +344,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 19,
               "Title": "ObtenerOperaciones.cs",
               "DocumentMoniker": "C:\\Users\\santi\\Desktop\\challenge-metafar\\Application\\Movimientos\\Queries\\ObtenerOperaciones.cs",
               "RelativeDocumentMoniker": "Application\\Movimientos\\Queries\\ObtenerOperaciones.cs",
@@ -387,7 +356,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 20,
               "Title": "Login.cs",
               "DocumentMoniker": "C:\\Users\\santi\\Desktop\\challenge-metafar\\Application\\Movimientos\\Queries\\Login.cs",
               "RelativeDocumentMoniker": "Application\\Movimientos\\Queries\\Login.cs",
@@ -399,7 +368,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 18,
               "Title": "ObtenerSaldoPorNroTarjetaHandler.cs",
               "DocumentMoniker": "C:\\Users\\santi\\Desktop\\challenge-metafar\\Application\\Movimientos\\QueryHandlers\\ObtenerSaldoPorNroTarjetaHandler.cs",
               "RelativeDocumentMoniker": "Application\\Movimientos\\QueryHandlers\\ObtenerSaldoPorNroTarjetaHandler.cs",
@@ -411,7 +380,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 23,
               "Title": "ServiceResult.cs",
               "DocumentMoniker": "C:\\Users\\santi\\Desktop\\challenge-metafar\\Application\\Abstractions\\ServiceResult.cs",
               "RelativeDocumentMoniker": "Application\\Abstractions\\ServiceResult.cs",
@@ -423,7 +392,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 22,
               "Title": "ObtenerSaldoPorNroTarjeta.cs",
               "DocumentMoniker": "C:\\Users\\santi\\Desktop\\challenge-metafar\\Application\\Movimientos\\Queries\\ObtenerSaldoPorNroTarjeta.cs",
               "RelativeDocumentMoniker": "Application\\Movimientos\\Queries\\ObtenerSaldoPorNroTarjeta.cs",

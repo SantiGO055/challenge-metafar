@@ -80,9 +80,9 @@ namespace DataAccess.Repositories
             ServiceResult<Saldo> result = new();
             try
             {
-
-                var tarjeta = await _db.Tarjeta.FirstOrDefaultAsync(t => t.NroTarjeta == numeroTarjeta);
-                if (tarjeta == null)
+                var tarjeta = await ObtenerTarjeta(numeroTarjeta);
+                var tarjetaResult = tarjeta.Payload;
+                if (tarjetaResult == null)
                 {
                     result.Message = "Usuario no encontrado";
                     result.Payload = null;
@@ -91,19 +91,17 @@ namespace DataAccess.Repositories
                 }
                 else
                 {
-
-                    var cuenta = await _db.CuentaBancaria.FirstOrDefaultAsync(c => c.IDTarjeta == tarjeta.IDTarjeta); //nro de cuenta y saldo
+                    var cuenta = await _db.CuentaBancaria.FirstOrDefaultAsync(c => c.IDTarjeta == tarjetaResult.IDTarjeta); //nro de cuenta y saldo
                     var movimiento = await _db.Movimiento.FirstOrDefaultAsync(m => m.IDCuentaBancaria == cuenta.IDCuentaBancaria);
-                    var usuario = await _db.Usuario.FirstOrDefaultAsync(u => u.IDCuentaBancaria == cuenta.IDCuentaBancaria);
+                    var usuario = await _db.Usuario.FirstOrDefaultAsync(u => u.IDCuentaBancaria == cuenta!.IDCuentaBancaria);
                     result.Payload = new Saldo
                     {
-                        NombreUsuario = usuario.Nombre,
-                        NroCuenta = cuenta.NroCuenta,
-                        SaldoActual = cuenta.Saldo,
+                        NombreUsuario = usuario?.Nombre,
+                        NroCuenta = cuenta!.NroCuenta,
+                        SaldoActual = cuenta!.Saldo,
                         FechaExtraccion = movimiento?.FechaMovimiento
 
                     };
-
                 }
             }
             catch (Exception e)
@@ -115,12 +113,15 @@ namespace DataAccess.Repositories
         }
 
 
-        public async Task<ServiceResult<Saldo>> ExtraerSaldo(int tarjeta, decimal saldo)
+        public async Task<ServiceResult<Saldo>> ExtraerSaldo(int numeroTarjeta, decimal saldo)
         {
             ServiceResult<Saldo> result = new();
+            
+
             try
             {
-                var tarjetaResult = await _db.Tarjeta.FirstOrDefaultAsync(t => t.NroTarjeta == tarjeta);
+                var tarjeta = await ObtenerTarjeta(numeroTarjeta);
+                var tarjetaResult = tarjeta.Payload;
                 if (tarjetaResult == null)
                 {
                     result.Payload = null;
